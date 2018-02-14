@@ -14,6 +14,8 @@
 		681500BF2021005D00D8F000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681500BD2021005D00D8F000 /* LaunchScreen.storyboard */; };
 		689346F420224BF9008DDE7C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689346F320224BF9008DDE7C /* ChatVC.swift */; };
 		689346F620224C12008DDE7C /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689346F520224C12008DDE7C /* ChannelVC.swift */; };
+		6896C1FE2034A51300A33FB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6896C1FD2034A51300A33FB2 /* Constants.swift */; };
+		6896C2002034B22D00A33FB2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6896C1FF2034B22D00A33FB2 /* LoginVC.swift */; };
 		68FFFBC42021377000F2C119 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFFBC32021377000F2C119 /* SWRevealViewController.m */; };
 		A3203CFCEAB99DA80030D456 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C419F6DE20F08DCEEF987D17 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,8 @@
 		681500C02021005D00D8F000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		689346F320224BF9008DDE7C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		689346F520224C12008DDE7C /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		6896C1FD2034A51300A33FB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6896C1FF2034B22D00A33FB2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		68FFFBC12021376E00F2C119 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		68FFFBC22021377000F2C119 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		68FFFBC32021377000F2C119 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 		681500B32021005D00D8F000 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				6896C1FC2034A4EA00A33FB2 /* Utilities */,
 				689346F220224BD9008DDE7C /* View */,
 				689346F120224BD0008DDE7C /* Controller */,
 				689346F020224BC6008DDE7C /* Model */,
@@ -94,6 +99,7 @@
 			children = (
 				689346F320224BF9008DDE7C /* ChatVC.swift */,
 				689346F520224C12008DDE7C /* ChannelVC.swift */,
+				6896C1FF2034B22D00A33FB2 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -104,6 +110,14 @@
 				6814A998202355480014A49A /* GradientView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6896C1FC2034A4EA00A33FB2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6896C1FD2034A51300A33FB2 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		68FFFBC02021372400F2C119 /* Supporting Files */ = {
@@ -273,7 +287,9 @@
 				689346F420224BF9008DDE7C /* ChatVC.swift in Sources */,
 				6814A999202355480014A49A /* GradientView.swift in Sources */,
 				681500B52021005D00D8F000 /* AppDelegate.swift in Sources */,
+				6896C2002034B22D00A33FB2 /* LoginVC.swift in Sources */,
 				68FFFBC42021377000F2C119 /* SWRevealViewController.m in Sources */,
+				6896C1FE2034A51300A33FB2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +431,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X329BRT6C;
 				INFOPLIST_FILE = Smack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FannyFarm.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X329BRT6C;
 				INFOPLIST_FILE = Smack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FannyFarm.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
