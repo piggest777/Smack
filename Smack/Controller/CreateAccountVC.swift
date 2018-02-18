@@ -12,7 +12,7 @@ class CreateAccountVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func closeBtnPressed(_ sender: Any) {
