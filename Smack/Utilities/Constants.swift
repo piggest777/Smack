@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias CompletionHandler = (_ Success: Bool) -> ()
+typealias CompletionHandler = (_ success: Bool) -> ()
 
 //URL Constants
 let BASE_URL = "https://piggychat.herokuapp.com/v1/"
