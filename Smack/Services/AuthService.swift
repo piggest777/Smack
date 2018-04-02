@@ -188,6 +188,7 @@ class AuthService {
                 guard let data = response.data else { return }
                 
                self.setUserInfo(data: data)
+                
                 completion(true)
                 
             } else {
