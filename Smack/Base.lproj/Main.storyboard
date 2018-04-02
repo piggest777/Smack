@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -187,6 +181,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="BUe-2L-Cdc" eventType="touchUpInside" id="9bA-Wu-lde"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i10-YM-59C">
                                 <rect key="frame" x="35" y="336" width="250" height="30"/>
@@ -241,6 +238,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YRT-SL-dNm">
+                                <rect key="frame" x="141.5" y="365.5" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -252,11 +253,16 @@
                             <constraint firstItem="kWT-Vv-J1k" firstAttribute="centerX" secondItem="Krv-gG-j57" secondAttribute="centerX" id="RP6-tC-YyC"/>
                             <constraint firstItem="smG-7Y-M4N" firstAttribute="centerX" secondItem="Krv-gG-j57" secondAttribute="centerX" id="Zz3-Al-Ra6"/>
                             <constraint firstItem="r6p-p5-hPC" firstAttribute="centerX" secondItem="Krv-gG-j57" secondAttribute="centerX" id="acJ-5p-GrT"/>
+                            <constraint firstItem="YRT-SL-dNm" firstAttribute="centerX" secondItem="Krv-gG-j57" secondAttribute="centerX" id="btU-s0-3Wm"/>
+                            <constraint firstItem="YRT-SL-dNm" firstAttribute="centerY" secondItem="Krv-gG-j57" secondAttribute="centerY" constant="100" id="c8y-zR-2yE"/>
                             <constraint firstItem="r6p-p5-hPC" firstAttribute="top" secondItem="V0v-bh-5te" secondAttribute="bottom" constant="60" id="k6t-iR-GKA"/>
                             <constraint firstItem="i10-YM-59C" firstAttribute="centerX" secondItem="Krv-gG-j57" secondAttribute="centerX" id="r5z-IE-QkH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="password" destination="nfZ-Ck-POa" id="f09-J2-ckS"/>
+                        <outlet property="spinner" destination="YRT-SL-dNm" id="dxV-9o-TC1"/>
+                        <outlet property="userName" destination="VeG-RF-Ldp" id="C2d-Va-9fs"/>
                         <segue destination="dcE-pc-3EY" kind="show" identifier="toCreateAccount" id="1cL-F1-ZxU"/>
                     </connections>
                 </viewController>

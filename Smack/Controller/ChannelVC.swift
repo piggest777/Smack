@@ -26,6 +26,10 @@ class ChannelVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChanged(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setUpUserInfo()
+    }
 
     @IBAction func loginBtnPressed(_ sender: Any) {
         if AuthService.inctance.isLoggedIn {
@@ -39,6 +43,10 @@ class ChannelVC: UIViewController {
     }
     
     @objc func userDataDidChanged(_ notif: Notification) {
+        setUpUserInfo()
+    }
+    
+    func setUpUserInfo () {
         if AuthService.inctance.isLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
