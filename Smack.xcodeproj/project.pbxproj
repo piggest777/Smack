@@ -30,6 +30,7 @@
 		68B3EDD220551AB50083227B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B3EDD020551AB50083227B /* ProfileVC.swift */; };
 		68B3EDD320551AB50083227B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B3EDD120551AB50083227B /* ProfileVC.xib */; };
 		68C7092C203C65A30017B2C9 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7092B203C65A30017B2C9 /* RoundedButton.swift */; };
+		68F14E442079724F001858AF /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F14E432079724F001858AF /* SocketService.swift */; };
 		68FFFBC42021377000F2C119 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFFBC32021377000F2C119 /* SWRevealViewController.m */; };
 		A3203CFCEAB99DA80030D456 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C419F6DE20F08DCEEF987D17 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		68B3EDD020551AB50083227B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		68B3EDD120551AB50083227B /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		68C7092B203C65A30017B2C9 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		68F14E432079724F001858AF /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		68FFFBC12021376E00F2C119 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		68FFFBC22021377000F2C119 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		68FFFBC32021377000F2C119 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				688ABBD620390CAB00E0BE63 /* AuthService.swift */,
 				68954CA4203DB4B5009970B0 /* UserDataService.swift */,
 				6866456C2072D63600C7B661 /* MessegeService.swift */,
+				68F14E432079724F001858AF /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F14E442079724F001858AF /* SocketService.swift in Sources */,
 				68B3EDD220551AB50083227B /* ProfileVC.swift in Sources */,
 				68165AAF2073A2B00048C4A4 /* ChannelCell.swift in Sources */,
 				689346F620224C12008DDE7C /* ChannelVC.swift in Sources */,
