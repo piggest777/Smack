@@ -596,6 +596,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="channelNameLbl" destination="ZoA-bx-dA7" id="8yE-EO-JRl"/>
                         <outlet property="menuBtn" destination="kPe-TB-sPC" id="9eH-Xq-sNW"/>
                     </connections>
                 </viewController>
