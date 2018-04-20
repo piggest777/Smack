@@ -595,6 +595,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editing:" destination="XIK-hz-wyl" eventType="editingChanged" id="Ofj-Nx-ncM"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh9-7j-kUk">
                                 <rect key="frame" x="282" y="533" width="30" height="30"/>
@@ -683,6 +686,7 @@
                         <outlet property="channelNameLbl" destination="ZoA-bx-dA7" id="8yE-EO-JRl"/>
                         <outlet property="menuBtn" destination="kPe-TB-sPC" id="9eH-Xq-sNW"/>
                         <outlet property="messageTxtBox" destination="2sW-hp-HYP" id="bsf-q0-fia"/>
+                        <outlet property="sendButton" destination="hh9-7j-kUk" id="tzl-eS-Ay2"/>
                         <outlet property="tableView" destination="QzV-uf-e0o" id="qrh-c7-T2C"/>
                     </connections>
                 </viewController>

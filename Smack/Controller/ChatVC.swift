@@ -15,6 +15,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var channelNameLbl: UILabel!
     @IBOutlet weak var messageTxtBox: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    //Variables
+    var isTaping = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         view.addGestureRecognizer(tap)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        sendButton.isHidden = true
         
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -33,6 +40,16 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChanged(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected), name: NOTIF_CHANNEL_SELECTED, object: nil)
+        
+        SocketService.instance.getChatMessage { (success) in
+            if success {
+                self.tableView.reloadData()
+                if MessageService.instance.messages.count > 0 {
+                    let endIndex =  IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+                }
+            }
+        }
         
         if AuthService.inctance.isLoggedIn {
             AuthService.inctance.findUserByEmail (completion: { (success) in
@@ -57,6 +74,21 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         getMessages()
     }
     
+    @IBAction func editing(_ sender: Any) {
+        
+        if messageTxtBox.text == "" {
+            isTaping = false
+            sendButton.isHidden = true
+        } else {
+            if isTaping == false {
+                sendButton.isHidden  = false
+            }
+            isTaping = true
+        }
+        
+    }
+    
+    
     @IBAction func sendMsgPressed(_ sender: Any) {
         if AuthService.inctance.isLoggedIn{
             guard let channelId = MessageService.instance.selectedChannel?.id else {return}
@@ -78,6 +110,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             onLoginGetMessages()
         } else {
             channelNameLbl.text = "Please Log in"
+            tableView.reloadData()
         }
     }
     
