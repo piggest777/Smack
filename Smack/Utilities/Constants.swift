@@ -9,6 +9,7 @@
 import Foundation
 
 typealias CompletionHandler = (_ success: Bool) -> ()
+//typealias <#type name#> = (_ typingUsers:[String: String]) -> Void)
 
 //URL Constants
 let BASE_URL = "https://piggychat.herokuapp.com/v1/"
